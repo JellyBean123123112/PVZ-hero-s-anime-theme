@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Art Preview</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=DM+Sans:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0b0b0f;color:#e4e4f0;font-family:'DM Sans',sans-serif;padding:16px}
+h1{font-family:'Cinzel',serif;color:#c8a96e;text-align:center;font-size:18px;letter-spacing:3px;margin-bottom:3px}
+.sub{text-align:center;color:#58586e;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.sec{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:#c8a96e;text-transform:uppercase;
+  margin:20px 0 12px;padding-left:8px;border-left:3px solid #c8a96e}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:10px}
+
+/* card */
+.card{width:82px;height:116px;border-radius:9px;display:flex;flex-direction:column;
+position:relative;overflow:hidden;cursor:pointer;flex-shrink:0}
+.card::before{content:’’;position:absolute;inset:0;
+background:linear-gradient(180deg,#ffffff0a 0%,transparent 40%);pointer-events:none;z-index:1}
+.hero{background:linear-gradient(150deg,#182818,#101610);border:1.5px solid #52b06a55}
+.vil{background:linear-gradient(150deg,#281818,#160f0f);border:1.5px solid #c8606055}
+.evolved{border:1.5px solid #c8a96e88;box-shadow:0 0 14px #c8a96e30}
+.pip{position:absolute;top:4px;left:4px;width:17px;height:17px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;z-index:3}
+.hero .pip{background:linear-gradient(135deg,#d4b478,#c8a96e);color:#1a1000}
+.vil .pip{background:linear-gradient(135deg,#d47070,#c86060);color:#fff}
+.evolved .pip{background:linear-gradient(135deg,#f0c840,#c8a030);color:#1a1000}
+.art{flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;padding-top:4px}
+.name{font-family:‘Cinzel’,serif;font-size:7px;font-weight:700;text-align:center;padding:0 3px;
+line-height:1.2;color:#9090b0;position:relative;z-index:2}
+.stats{display:flex;justify-content:space-between;padding:2px 5px 4px;font-size:9px;font-weight:700;z-index:2;position:relative}
+.atk{color:#c8a96e}.hp{color:#52b06a}.vil .hp{color:#c86060}
+
+.note{background:#13131a;border:1px solid #c8a96e22;border-radius:10px;padding:12px 14px;
+font-size:11px;color:#7070a0;line-height:1.7;margin-top:16px;text-align:center}
+.note strong{color:#c8a96e}
+</style>
+
+</head>
+<body>
+<h1>Pixel Art — Character Sprites</h1>
+<div class="sub">16×16 · rendered at 52px · approve before wiring into game</div>
+
+<div class="sec">Protagonists</div>
+<div class="grid">
+
+<!-- ═══ YOUNG GON ═══ 32x40 high detail -->
+
+<div class="card hero">
+  <div class="pip">2</div>
+  <div class="art">
+    <svg width="56" height="68" viewBox="0 0 32 40" style="image-rendering:pixelated">
+      <!-- === HAIR === -->
+      <!-- far left spike -->
+      <rect x="3"  y="3"  width="3" height="2" fill="#2a7000"/>
+      <rect x="3"  y="5"  width="3" height="3" fill="#111100"/>
+      <!-- mid-left spike -->
+      <rect x="8"  y="1"  width="3" height="2" fill="#2a7000"/>
+      <rect x="8"  y="3"  width="3" height="3" fill="#111100"/>
+      <!-- center spike tallest -->
+      <rect x="14" y="0"  width="4" height="2" fill="#338800"/>
+      <rect x="14" y="2"  width="4" height="3" fill="#1a1a00"/>
+      <rect x="14" y="5"  width="4" height="2" fill="#111100"/>
+      <!-- mid-right spike -->
+      <rect x="21" y="1"  width="3" height="2" fill="#2a7000"/>
+      <rect x="21" y="3"  width="3" height="3" fill="#111100"/>
+      <!-- far right spike -->
+      <rect x="26" y="3"  width="3" height="2" fill="#2a7000"/>
+      <rect x="26" y="5"  width="3" height="3" fill="#111100"/>
+      <!-- hair body mass -->
+      <rect x="5"  y="6"  width="22" height="5" fill="#111100"/>
+      <rect x="3"  y="7"  width="3"  height="5" fill="#111100"/>
+      <rect x="26" y="7"  width="3"  height="5" fill="#111100"/>
+      <!-- underside of hair slightly lighter -->
+      <rect x="6"  y="10" width="20" height="2" fill="#1a1a00"/>
+      <!-- === FACE === -->
+      <!-- warm tan skin -->
+      <rect x="6"  y="11" width="20" height="12" fill="#f2c068"/>
+      <rect x="5"  y="12" width="2"  height="10" fill="#f2c068"/>
+      <rect x="25" y="12" width="2"  height="10" fill="#f2c068"/>
+      <!-- jaw rounded -->
+      <rect x="7"  y="22" width="18" height="2"  fill="#f2c068"/>
+      <rect x="9"  y="24" width="14" height="1"  fill="#f2c068"/>
+      <!-- === EYEBROWS === -->
+      <rect x="8"  y="12" width="5" height="2" fill="#7a4010"/>
+      <rect x="19" y="12" width="5" height="2" fill="#7a4010"/>
+      <!-- === EYES === big hazel, white sclera visible all around -->
+      <!-- left eye -->
+      <rect x="8"  y="14" width="6" height="5" fill="#ffffff"/>
+      <rect x="9"  y="14" width="4" height="5" fill="#ffffff"/>
+      <rect x="9"  y="15" width="4" height="4" fill="#7a4818"/>
+      <rect x="10" y="15" width="3" height="4" fill="#5a3010"/>
+      <rect x="10" y="16" width="3" height="2" fill="#200a00"/>
+      <!-- left eye shine -->
+      <rect x="9"  y="15" width="2" height="2" fill="#ffffff"/>
+      <rect x="9"  y="15" width="1" height="1" fill="#ffffff"/>
+      <!-- right eye -->
+      <rect x="18" y="14" width="6" height="5" fill="#ffffff"/>
+      <rect x="19" y="14" width="4" height="5" fill="#ffffff"/>
+      <rect x="19" y="15" width="4" height="4" fill="#7a4818"/>
+      <rect x="20" y="15" width="3" height="4" fill="#5a3010"/>
+      <rect x="20" y="16" width="3" height="2" fill="#200a00"/>
+      <!-- right eye shine -->
+      <rect x="19" y="15" width="2" height="2" fill="#ffffff"/>
+      <rect x="19" y="15" width="1" height="1" fill="#ffffff"/>
+      <!-- === NOSE === -->
+      <rect x="14" y="20" width="4" height="2" fill="#d8a048"/>
+      <rect x="13" y="21" width="2" height="1" fill="#c09040"/>
+      <rect x="17" y="21" width="2" height="1" fill="#c09040"/>
+      <!-- === GRIN === very wide, teeth showing -->
+      <rect x="9"  y="22" width="14" height="2" fill="#c05030"/>
+      <rect x="10" y="24" width="12" height="2" fill="#c05030"/>
+      <!-- teeth row -->
+      <rect x="10" y="22" width="2"  height="2" fill="#f8f8f8"/>
+      <rect x="13" y="22" width="2"  height="2" fill="#f8f8f8"/>
+      <rect x="16" y="22" width="2"  height="2" fill="#f8f8f8"/>
+      <rect x="19" y="22" width="2"  height="2" fill="#f8f8f8"/>
+      <!-- cheek blush -->
+      <rect x="6"  y="20" width="3" height="2" fill="#e8a060" opacity=".5"/>
+      <rect x="23" y="20" width="3" height="2" fill="#e8a060" opacity=".5"/>
+      <!-- === NECK === -->
+      <rect x="13" y="25" width="6" height="3" fill="#f2c068"/>
+      <!-- === GREEN JACKET === -->
+      <!-- main body -->
+      <rect x="6"  y="28" width="20" height="11" fill="#2e7228"/>
+      <!-- RED COLLAR TRIM across shoulders/chest -->
+      <rect x="10" y="28" width="12" height="3"  fill="#c41c18"/>
+      <!-- black undershirt visible in V of collar -->
+      <rect x="13" y="28" width="6"  height="5"  fill="#222222"/>
+      <!-- jacket detail - darker side panels -->
+      <rect x="6"  y="31" width="4"  height="8"  fill="#236020"/>
+      <rect x="22" y="31" width="4"  height="8"  fill="#236020"/>
+      <!-- jacket center seam -->
+      <rect x="15" y="31" width="2"  height="8"  fill="#266822"/>
+      <!-- === ARMS === -->
+      <rect x="2"  y="28" width="4"  height="10" fill="#2e7228"/>
+      <rect x="26" y="28" width="4"  height="10" fill="#2e7228"/>
+      <!-- darker arm inner -->
+      <rect x="2"  y="30" width="2"  height="7"  fill="#236020"/>
+      <rect x="28" y="30" width="2"  height="7"  fill="#236020"/>
+      <!-- === HANDS === -->
+      <rect x="0"  y="36" width="4"  height="3"  fill="#f2c068"/>
+      <rect x="28" y="36" width="4"  height="3"  fill="#f2c068"/>
+      <!-- fingers -->
+      <rect x="0"  y="36" width="1"  height="4"  fill="#e8b860"/>
+      <rect x="1"  y="36" width="1"  height="5"  fill="#f2c068"/>
+      <rect x="2"  y="36" width="1"  height="5"  fill="#f2c068"/>
+      <rect x="3"  y="36" width="1"  height="4"  fill="#e8b860"/>
+      <rect x="28" y="36" width="1"  height="4"  fill="#e8b860"/>
+      <rect x="29" y="36" width="1"  height="5"  fill="#f2c068"/>
+      <rect x="30" y="36" width="1"  height="5"  fill="#f2c068"/>
+      <rect x="31" y="36" width="1"  height="4"  fill="#e8b860"/>
+    </svg>
+  </div>
+  <div class="name">Young Gon</div>
+  <div class="stats"><span class="atk">⚔2</span><span class="hp">♥2</span></div>
+</div>
+
+<!-- ═══ ENRAGED GON ═══
+     Wild dark hair, glowing yellow-green eyes, torn dark clothes, bright green nen aura glow -->
+
+<div class="card hero evolved">
+  <div class="pip">0</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- nen aura glow - bright edges -->
+      <rect x="0" y="2" width="1" height="13" fill="#00dd44"/>
+      <rect x="15" y="2" width="1" height="13" fill="#00dd44"/>
+      <rect x="1" y="0" width="1" height="3" fill="#00bb33"/>
+      <rect x="14" y="0" width="1" height="3" fill="#00bb33"/>
+      <!-- wild untamed dark hair going in all directions -->
+      <rect x="2" y="0" width="12" height="1" fill="#0c0900"/>
+      <rect x="1" y="1" width="14" height="3" fill="#0c0900"/>
+      <rect x="0" y="2" width="2" height="4" fill="#0c0900"/>
+      <rect x="14" y="2" width="2" height="4" fill="#0c0900"/>
+      <!-- extra spiky chunks of hair -->
+      <rect x="2" y="0" width="2" height="2" fill="#080600"/>
+      <rect x="12" y="0" width="2" height="2" fill="#080600"/>
+      <rect x="6" y="0" width="4" height="1" fill="#141000"/>
+      <!-- darker skin - strain/exhaustion -->
+      <rect x="3" y="4" width="10" height="5" fill="#c07838"/>
+      <!-- GLOWING YELLOW-GREEN EYES - the key visual of enraged Gon -->
+      <!-- left eye glow -->
+      <rect x="3" y="5" width="4" height="2" fill="#111000"/>
+      <rect x="4" y="5" width="3" height="2" fill="#aacc00"/>
+      <rect x="4" y="5" width="2" height="1" fill="#eeff00"/>
+      <rect x="4" y="5" width="1" height="1" fill="#ffffff"/>
+      <!-- right eye glow -->
+      <rect x="9" y="5" width="4" height="2" fill="#111000"/>
+      <rect x="9" y="5" width="3" height="2" fill="#aacc00"/>
+      <rect x="10" y="5" width="2" height="1" fill="#eeff00"/>
+      <rect x="10" y="5" width="1" height="1" fill="#ffffff"/>
+      <!-- furious brows v-shaped inward -->
+      <rect x="3" y="4" width="4" height="1" fill="#080600"/>
+      <rect x="9" y="4" width="4" height="1" fill="#080600"/>
+      <rect x="3" y="5" width="1" height="1" fill="#080600"/>
+      <rect x="12" y="5" width="1" height="1" fill="#080600"/>
+      <!-- snarl mouth showing teeth -->
+      <rect x="4" y="8" width="8" height="1" fill="#8a0000"/>
+      <rect x="5" y="8" width="1" height="1" fill="#e0e0e0"/>
+      <rect x="7" y="8" width="2" height="1" fill="#e0e0e0"/>
+      <rect x="10" y="8" width="1" height="1" fill="#e0e0e0"/>
+      <!-- neck -->
+      <rect x="6" y="9" width="4" height="1" fill="#c07838"/>
+      <!-- torn dark outfit -->
+      <rect x="2" y="10" width="12" height="5" fill="#0a1208"/>
+      <!-- torn edges -->
+      <rect x="2" y="10" width="1" height="2" fill="#001800"/>
+      <rect x="13" y="10" width="1" height="2" fill="#001800"/>
+      <!-- nen-charged fists -->
+      <rect x="0" y="10" width="2" height="5" fill="#0a1208"/>
+      <rect x="14" y="10" width="2" height="5" fill="#0a1208"/>
+      <rect x="0" y="12" width="2" height="2" fill="#c07838"/>
+      <rect x="14" y="12" width="2" height="2" fill="#c07838"/>
+      <!-- fist aura flare -->
+      <rect x="0" y="10" width="1" height="3" fill="#00ff44"/>
+      <rect x="15" y="10" width="1" height="3" fill="#00ff44"/>
+    </svg>
+  </div>
+  <div class="name">Enraged Gon</div>
+  <div class="stats"><span class="atk">⚔6</span><span class="hp">♥5</span></div>
+</div>
+
+<!-- ═══ KILLUA ═══ 32x40 high detail -->
+
+<div class="card hero">
+  <div class="pip">2</div>
+  <div class="art">
+    <svg width="56" height="68" viewBox="0 0 32 40" style="image-rendering:pixelated">
+      <!-- === HAIR === spiky white-silver, wild upward spikes, messy bangs left -->
+      <!-- left side spikes -->
+      <rect x="4"  y="1"  width="3" height="3" fill="#dce8f4"/>
+      <rect x="8"  y="0"  width="3" height="3" fill="#e8f0f8"/>
+      <!-- center spikes -->
+      <rect x="13" y="0"  width="3" height="4" fill="#f0f6fc"/>
+      <rect x="17" y="0"  width="3" height="3" fill="#e8f0f8"/>
+      <!-- right spikes -->
+      <rect x="22" y="1"  width="3" height="3" fill="#dce8f4"/>
+      <rect x="26" y="2"  width="3" height="3" fill="#d0e0ee"/>
+      <!-- hair body -->
+      <rect x="5"  y="4"  width="22" height="5" fill="#e4eef8"/>
+      <rect x="3"  y="5"  width="3"  height="5" fill="#dce8f4"/>
+      <rect x="26" y="5"  width="3"  height="5" fill="#d8e4f0"/>
+      <!-- hair highlights -->
+      <rect x="13" y="0"  width="6"  height="2" fill="#ffffff"/>
+      <rect x="10" y="2"  width="4"  height="1" fill="#f8fcff"/>
+      <!-- MESSY BANGS falling forward over left forehead -->
+      <rect x="4"  y="6"  width="8"  height="3" fill="#dce8f4"/>
+      <rect x="4"  y="9"  width="6"  height="3" fill="#d0e0ee"/>
+      <rect x="4"  y="12" width="4"  height="3" fill="#c8dcea"/>
+      <rect x="4"  y="15" width="2"  height="2" fill="#c0d4e6"/>
+      <!-- === PALE FACE === -->
+      <rect x="6"  y="9"  width="20" height="13" fill="#f0e8e0"/>
+      <rect x="5"  y="10" width="2"  height="11" fill="#f0e8e0"/>
+      <rect x="25" y="10" width="2"  height="11" fill="#f0e8e0"/>
+      <rect x="8"  y="21" width="16" height="2"  fill="#f0e8e0"/>
+      <rect x="10" y="23" width="12" height="1"  fill="#ead8d0"/>
+      <!-- === EYES === cold blue, slightly narrowed, not as wide as Gon -->
+      <!-- left eye -->
+      <rect x="8"  y="12" width="6" height="4" fill="#ffffff"/>
+      <rect x="9"  y="13" width="5" height="3" fill="#1a3898"/>
+      <rect x="9"  y="13" width="4" height="2" fill="#2a4ab8"/>
+      <rect x="9"  y="13" width="3" height="1" fill="#4a70d8"/>
+      <rect x="11" y="13" width="2" height="1" fill="#8ab0ff"/>
+      <!-- left eye shine -->
+      <rect x="9"  y="13" width="2" height="1" fill="#ffffff"/>
+      <!-- right eye -->
+      <rect x="18" y="12" width="6" height="4" fill="#ffffff"/>
+      <rect x="19" y="13" width="5" height="3" fill="#1a3898"/>
+      <rect x="19" y="13" width="4" height="2" fill="#2a4ab8"/>
+      <rect x="19" y="13" width="3" height="1" fill="#4a70d8"/>
+      <rect x="21" y="13" width="2" height="1" fill="#8ab0ff"/>
+      <!-- right eye shine -->
+      <rect x="19" y="13" width="2" height="1" fill="#ffffff"/>
+      <!-- upper eyelids slightly heavier - gives the cold look -->
+      <rect x="8"  y="12" width="6" height="1" fill="#c8b0a0"/>
+      <rect x="18" y="12" width="6" height="1" fill="#c8b0a0"/>
+      <!-- === SMIRK === one-sided slight smile -->
+      <rect x="12" y="20" width="8" height="2" fill="#c09080"/>
+      <rect x="18" y="19" width="3" height="3" fill="#f0e8e0"/>
+      <!-- === NECK === -->
+      <rect x="13" y="23" width="6" height="3" fill="#f0e8e0"/>
+      <!-- === BLUE TURTLENECK === high neck, baggy sweater -->
+      <!-- high collar fold -->
+      <rect x="10" y="23" width="12" height="2" fill="#4a7ac0"/>
+      <rect x="9"  y="25" width="14" height="2" fill="#3a6ab0"/>
+      <rect x="8"  y="27" width="16" height="1" fill="#2e5898"/>
+      <!-- neck ribbing detail on turtleneck -->
+      <rect x="11" y="24" width="1" height="3" fill="#5888cc"/>
+      <rect x="13" y="24" width="1" height="3" fill="#5888cc"/>
+      <rect x="15" y="24" width="1" height="3" fill="#5888cc"/>
+      <rect x="17" y="24" width="1" height="3" fill="#5888cc"/>
+      <rect x="19" y="24" width="1" height="3" fill="#5888cc"/>
+      <!-- sweater body baggy -->
+      <rect x="6"  y="28" width="20" height="8" fill="#3a6ab0"/>
+      <!-- sweater fabric folds/shading -->
+      <rect x="6"  y="30" width="3"  height="5" fill="#2e5898"/>
+      <rect x="23" y="30" width="3"  height="5" fill="#2e5898"/>
+      <rect x="14" y="29" width="4"  height="7" fill="#4478bc"/>
+      <!-- === ARMS long blue sleeves === -->
+      <rect x="2"  y="28" width="4"  height="9" fill="#3a6ab0"/>
+      <rect x="26" y="28" width="4"  height="9" fill="#3a6ab0"/>
+      <rect x="2"  y="31" width="2"  height="5" fill="#2e5898"/>
+      <rect x="28" y="31" width="2"  height="5" fill="#2e5898"/>
+      <!-- === ELECTRIC CLAWS - Killua's Godspeed === -->
+      <!-- left hand -->
+      <rect x="0"  y="35" width="3" height="2" fill="#f0e8e0"/>
+      <rect x="0"  y="34" width="1" height="3" fill="#f0e8e0"/>
+      <!-- electric claws extending from each finger -->
+      <rect x="0"  y="33" width="1" height="2" fill="#ccee00"/>
+      <rect x="1"  y="32" width="1" height="3" fill="#ddff00"/>
+      <rect x="2"  y="33" width="1" height="2" fill="#ccee00"/>
+      <rect x="3"  y="33" width="1" height="2" fill="#aad000"/>
+      <!-- lightning glow left -->
+      <rect x="0"  y="33" width="4" height="1" fill="#eeff88" opacity=".6"/>
+      <!-- right hand -->
+      <rect x="29" y="35" width="3" height="2" fill="#f0e8e0"/>
+      <rect x="31" y="34" width="1" height="3" fill="#f0e8e0"/>
+      <!-- electric claws right -->
+      <rect x="28" y="33" width="1" height="2" fill="#aad000"/>
+      <rect x="29" y="32" width="1" height="3" fill="#ccee00"/>
+      <rect x="30" y="33" width="1" height="2" fill="#ddff00"/>
+      <rect x="31" y="33" width="1" height="2" fill="#ccee00"/>
+      <!-- lightning glow right -->
+      <rect x="28" y="33" width="4" height="1" fill="#eeff88" opacity=".6"/>
+      <!-- === BAGGY WHITE SHORTS === -->
+      <rect x="8"  y="36" width="7"  height="4" fill="#eaeaea"/>
+      <rect x="17" y="36" width="7"  height="4" fill="#eaeaea"/>
+      <rect x="8"  y="37" width="3"  height="3" fill="#e0e0e0"/>
+      <rect x="21" y="37" width="3"  height="3" fill="#e0e0e0"/>
+      <!-- shorts fold/crease -->
+      <rect x="11" y="36" width="10" height="1" fill="#d8d8d8"/>
+    </svg>
+  </div>
+  <div class="name">Killua</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥1</span></div>
+</div>
+
+<!-- ═══ NARUTO ═══
+     Blonde spiky hair, WHISKER MARKS (3 per cheek), blue eyes, orange+blue jumpsuit -->
+
+<div class="card hero">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- blonde spiky hair -->
+      <rect x="5" y="0" width="6" height="1" fill="#d4a800"/>
+      <rect x="4" y="1" width="8" height="1" fill="#d4a800"/>
+      <rect x="3" y="2" width="10" height="3" fill="#d4a800"/>
+      <rect x="2" y="3" width="2" height="3" fill="#c49800"/>
+      <rect x="12" y="3" width="2" height="3" fill="#c49800"/>
+      <!-- blonde spikes -->
+      <rect x="4" y="0" width="2" height="2" fill="#e0bc00"/>
+      <rect x="10" y="0" width="2" height="2" fill="#e0bc00"/>
+      <rect x="7" y="0" width="2" height="1" fill="#ecc800"/>
+      <!-- tan skin -->
+      <rect x="4" y="5" width="8" height="4" fill="#e8b860"/>
+      <!-- blue eyes -->
+      <rect x="5" y="6" width="2" height="2" fill="#0840b0"/>
+      <rect x="9" y="6" width="2" height="2" fill="#0840b0"/>
+      <rect x="5" y="6" width="1" height="1" fill="#3070e0"/>
+      <rect x="9" y="6" width="1" height="1" fill="#3070e0"/>
+      <rect x="6" y="6" width="1" height="1" fill="#80b0ff"/>
+      <rect x="10" y="6" width="1" height="1" fill="#80b0ff"/>
+      <!-- WHISKER MARKS - 3 lines each cheek, THE most iconic naruto feature -->
+      <rect x="4" y="6" width="1" height="1" fill="#c09040"/>
+      <rect x="4" y="7" width="1" height="1" fill="#c09040"/>
+      <rect x="4" y="8" width="1" height="1" fill="#c09040"/>
+      <rect x="11" y="6" width="1" height="1" fill="#c09040"/>
+      <rect x="11" y="7" width="1" height="1" fill="#c09040"/>
+      <rect x="11" y="8" width="1" height="1" fill="#c09040"/>
+      <!-- smile -->
+      <rect x="5" y="8" width="6" height="1" fill="#c07040"/>
+      <rect x="6" y="9" width="4" height="1" fill="#c07040"/>
+      <!-- ORANGE jumpsuit - very saturated -->
+      <rect x="3" y="9" width="10" height="6" fill="#e85800"/>
+      <!-- BLUE collar/detail stripe -->
+      <rect x="5" y="9" width="6" height="1" fill="#1840a0"/>
+      <!-- blue cuffs/belt line -->
+      <rect x="3" y="13" width="10" height="1" fill="#1840a0"/>
+      <!-- arms orange -->
+      <rect x="1" y="9" width="2" height="6" fill="#e85800"/>
+      <rect x="13" y="9" width="2" height="6" fill="#e85800"/>
+      <rect x="0" y="13" width="2" height="2" fill="#e8b860"/>
+      <rect x="14" y="13" width="2" height="2" fill="#e8b860"/>
+    </svg>
+  </div>
+  <div class="name">Naruto</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥4</span></div>
+</div>
+
+<!-- ═══ MIKASA ═══
+     Black straight hair, RED SCARF (wraps face), grey survey corps jacket -->
+
+<div class="card hero">
+  <div class="pip">2</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- straight black hair - tight, short -->
+      <rect x="4" y="0" width="8" height="4" fill="#0e0c0c"/>
+      <rect x="3" y="1" width="2" height="6" fill="#0e0c0c"/>
+      <rect x="11" y="1" width="2" height="6" fill="#0e0c0c"/>
+      <rect x="5" y="0" width="6" height="1" fill="#181414"/>
+      <!-- pale skin just the eyes showing above scarf -->
+      <rect x="4" y="4" width="8" height="3" fill="#e8c8a0"/>
+      <!-- calm dark serious eyes -->
+      <rect x="5" y="5" width="2" height="2" fill="#181010"/>
+      <rect x="9" y="5" width="2" height="2" fill="#181010"/>
+      <rect x="6" y="5" width="1" height="1" fill="#2a1a1a"/>
+      <rect x="10" y="5" width="1" height="1" fill="#2a1a1a"/>
+      <rect x="5" y="5" width="1" height="1" fill="#ffffff" opacity=".3"/>
+      <rect x="9" y="5" width="1" height="1" fill="#ffffff" opacity=".3"/>
+      <!-- THE RED SCARF - covers lower face, neck, wraps around -->
+      <rect x="3" y="7" width="10" height="4" fill="#c81818"/>
+      <rect x="2" y="8" width="2" height="3" fill="#b01010"/>
+      <rect x="12" y="8" width="2" height="3" fill="#b01010"/>
+      <!-- scarf highlight fold -->
+      <rect x="4" y="7" width="8" height="1" fill="#e02020"/>
+      <!-- grey survey corps jacket -->
+      <rect x="3" y="11" width="10" height="4" fill="#707060"/>
+      <rect x="5" y="11" width="6" height="1" fill="#606050"/>
+      <!-- wing crest hint (white) -->
+      <rect x="6" y="12" width="4" height="1" fill="#909090"/>
+      <!-- 3DMG straps -->
+      <rect x="5" y="11" width="1" height="4" fill="#504838"/>
+      <rect x="10" y="11" width="1" height="4" fill="#504838"/>
+      <!-- arms grey -->
+      <rect x="1" y="11" width="2" height="4" fill="#707060"/>
+      <rect x="13" y="11" width="2" height="4" fill="#707060"/>
+      <rect x="0" y="13" width="2" height="2" fill="#e8c8a0"/>
+      <rect x="14" y="13" width="2" height="2" fill="#e8c8a0"/>
+    </svg>
+  </div>
+  <div class="name">Mikasa</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥2</span></div>
+</div>
+
+<!-- ═══ LEVI ═══
+     Short black undercut, WHITE CRAVAT, grey jacket, steel grey eyes, permanent scowl -->
+
+<div class="card hero">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- short undercut - longer on top swept left, shaved sides -->
+      <rect x="3" y="0" width="9" height="2" fill="#141010"/>
+      <rect x="3" y="2" width="8" height="2" fill="#141010"/>
+      <rect x="3" y="1" width="2" height="4" fill="#141010"/>
+      <!-- shaved sides -->
+      <rect x="2" y="3" width="1" height="3" fill="#0a0808"/>
+      <rect x="13" y="3" width="1" height="3" fill="#0a0808"/>
+      <!-- pale sharp face -->
+      <rect x="4" y="4" width="8" height="4" fill="#d8c0a0"/>
+      <!-- permanent scowl brows - slanted harshly inward -->
+      <rect x="4" y="4" width="4" height="1" fill="#141010"/>
+      <rect x="8" y="4" width="4" height="1" fill="#141010"/>
+      <rect x="4" y="5" width="1" height="1" fill="#141010"/>
+      <rect x="11" y="5" width="1" height="1" fill="#141010"/>
+      <!-- steel grey eyes - narrow, intense -->
+      <rect x="5" y="5" width="2" height="2" fill="#384050"/>
+      <rect x="9" y="5" width="2" height="2" fill="#384050"/>
+      <rect x="5" y="5" width="1" height="1" fill="#6878a0"/>
+      <rect x="9" y="5" width="1" height="1" fill="#6878a0"/>
+      <!-- tight frown -->
+      <rect x="6" y="7" width="4" height="1" fill="#9a7860"/>
+      <!-- WHITE CRAVAT tied at neck - extremely distinctive -->
+      <rect x="4" y="8" width="8" height="3" fill="#ececf4"/>
+      <rect x="5" y="10" width="6" height="2" fill="#dcdce8"/>
+      <!-- cravat knot in center -->
+      <rect x="7" y="8" width="2" height="1" fill="#c8c8d8"/>
+      <!-- grey survey corps jacket -->
+      <rect x="3" y="10" width="10" height="5" fill="#686858"/>
+      <rect x="5" y="10" width="6" height="1" fill="#585848"/>
+      <!-- green maneuver gear straps -->
+      <rect x="2" y="11" width="2" height="4" fill="#2a5830"/>
+      <rect x="12" y="11" width="2" height="4" fill="#2a5830"/>
+      <!-- arms jacket -->
+      <rect x="1" y="10" width="1" height="5" fill="#686858"/>
+      <rect x="14" y="10" width="1" height="5" fill="#686858"/>
+      <rect x="0" y="13" width="2" height="3" fill="#d8c0a0"/>
+      <rect x="14" y="13" width="2" height="3" fill="#d8c0a0"/>
+    </svg>
+  </div>
+  <div class="name">Levi</div>
+  <div class="stats"><span class="atk">⚔4</span><span class="hp">♥2</span></div>
+</div>
+
+<!-- ═══ ROCK LEE ═══
+     BOWL CUT, THICK BROWS, GREEN JUMPSUIT, orange leg weights, white bandages -->
+
+<div class="card hero">
+  <div class="pip">2</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- BOWL CUT - perfectly even, thick, round, BLACK -->
+      <rect x="3" y="0" width="10" height="1" fill="#0a0a0a"/>
+      <rect x="2" y="1" width="12" height="4" fill="#0a0a0a"/>
+      <rect x="1" y="2" width="2" height="3" fill="#0a0a0a"/>
+      <rect x="13" y="2" width="2" height="3" fill="#0a0a0a"/>
+      <!-- perfectly even bowl bottom edge -->
+      <rect x="2" y="5" width="12" height="1" fill="#0a0a0a"/>
+      <!-- tan face -->
+      <rect x="4" y="5" width="8" height="4" fill="#dfb068"/>
+      <!-- THICK CATERPILLAR BROWS - widest possible, most iconic feature -->
+      <rect x="4" y="5" width="4" height="1" fill="#0a0a0a"/>
+      <rect x="8" y="5" width="4" height="1" fill="#0a0a0a"/>
+      <!-- round dark eyes -->
+      <rect x="5" y="6" width="2" height="2" fill="#141414"/>
+      <rect x="9" y="6" width="2" height="2" fill="#141414"/>
+      <rect x="6" y="6" width="1" height="1" fill="#3a3a3a"/>
+      <rect x="10" y="6" width="1" height="1" fill="#3a3a3a"/>
+      <!-- big determined grin -->
+      <rect x="5" y="8" width="6" height="1" fill="#c07848"/>
+      <rect x="6" y="9" width="4" height="1" fill="#c07848"/>
+      <!-- GREEN JUMPSUIT body -->
+      <rect x="3" y="9" width="10" height="5" fill="#1a6822"/>
+      <rect x="6" y="9" width="4" height="1" fill="#125018"/>
+      <!-- white bandages on wrists/arms -->
+      <rect x="1" y="9" width="2" height="5" fill="#1a6822"/>
+      <rect x="13" y="9" width="2" height="5" fill="#1a6822"/>
+      <rect x="0" y="11" width="2" height="3" fill="#dcd8c8"/>
+      <rect x="14" y="11" width="2" height="3" fill="#dcd8c8"/>
+      <!-- ORANGE LEG WEIGHTS at ankles - very distinctive -->
+      <rect x="4" y="14" width="3" height="2" fill="#e05400"/>
+      <rect x="9" y="14" width="3" height="2" fill="#e05400"/>
+    </svg>
+  </div>
+  <div class="name">Rock Lee</div>
+  <div class="stats"><span class="atk">⚔1</span><span class="hp">♥4</span></div>
+</div>
+
+<!-- ═══ ICHIGO ═══
+     ORANGE spiky hair swept forward, BLACK kimono, white sash, permanent SCOWL -->
+
+<div class="card hero">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- ORANGE hair - spiky, forward-swept left -->
+      <rect x="3" y="0" width="8" height="1" fill="#d05000"/>
+      <rect x="2" y="1" width="10" height="2" fill="#d05000"/>
+      <rect x="1" y="2" width="4" height="3" fill="#d05000"/>
+      <rect x="10" y="2" width="3" height="2" fill="#d05000"/>
+      <!-- main spikes going left/forward direction -->
+      <rect x="1" y="1" width="2" height="1" fill="#cc4400"/>
+      <rect x="2" y="3" width="3" height="1" fill="#cc4400"/>
+      <!-- orange highlights -->
+      <rect x="4" y="0" width="4" height="1" fill="#f07020"/>
+      <rect x="3" y="1" width="3" height="1" fill="#f07020"/>
+      <!-- skin -->
+      <rect x="4" y="4" width="8" height="4" fill="#e8c898"/>
+      <!-- SCOWL BROWS - angled sharply inward making a V -->
+      <rect x="4" y="4" width="4" height="1" fill="#1a1a1a"/>
+      <rect x="8" y="4" width="4" height="1" fill="#1a1a1a"/>
+      <rect x="4" y="4" width="1" height="2" fill="#1a1a1a"/>
+      <rect x="11" y="4" width="1" height="2" fill="#1a1a1a"/>
+      <!-- brown eyes under scowl -->
+      <rect x="5" y="5" width="2" height="2" fill="#3a2010"/>
+      <rect x="9" y="5" width="2" height="2" fill="#3a2010"/>
+      <rect x="5" y="5" width="1" height="1" fill="#6a4020"/>
+      <rect x="9" y="5" width="1" height="1" fill="#6a4020"/>
+      <!-- frown / tight mouth -->
+      <rect x="6" y="7" width="4" height="1" fill="#a07858"/>
+      <!-- BLACK shihakusho kimono -->
+      <rect x="3" y="8" width="10" height="7" fill="#111111"/>
+      <!-- WHITE collar/sash - V shape opening -->
+      <rect x="6" y="8" width="4" height="1" fill="#e8e8e0"/>
+      <rect x="7" y="8" width="2" height="5" fill="#e8e8e0"/>
+      <!-- white sash belt -->
+      <rect x="3" y="13" width="10" height="1" fill="#e8e8e0"/>
+      <!-- black arms -->
+      <rect x="1" y="8" width="2" height="7" fill="#111111"/>
+      <rect x="13" y="8" width="2" height="7" fill="#111111"/>
+      <rect x="0" y="13" width="2" height="3" fill="#e8c898"/>
+      <rect x="14" y="13" width="2" height="3" fill="#e8c898"/>
+    </svg>
+  </div>
+  <div class="name">Ichigo</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥3</span></div>
+</div>
+
+<!-- ═══ LUFFY ═══
+     STRAW HAT with red band, red vest open over bare chest, scar under eye, black hair -->
+
+<div class="card hero">
+  <div class="pip">2</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- STRAW HAT - wide brim, most iconic piece -->
+      <rect x="0" y="2" width="16" height="2" fill="#c49018"/>
+      <rect x="1" y="1" width="14" height="1" fill="#b07a10"/>
+      <rect x="3" y="0" width="10" height="1" fill="#a06a08"/>
+      <!-- RED BAND on hat -->
+      <rect x="3" y="2" width="10" height="1" fill="#c01818"/>
+      <!-- hat dome -->
+      <rect x="4" y="1" width="8" height="2" fill="#d4a820"/>
+      <!-- black hair under brim -->
+      <rect x="4" y="3" width="8" height="2" fill="#111111"/>
+      <rect x="3" y="4" width="2" height="2" fill="#111111"/>
+      <rect x="11" y="4" width="2" height="2" fill="#111111"/>
+      <!-- tan face -->
+      <rect x="4" y="5" width="8" height="4" fill="#d4a050"/>
+      <!-- simple black dot eyes -->
+      <rect x="5" y="6" width="2" height="2" fill="#111111"/>
+      <rect x="9" y="6" width="2" height="2" fill="#111111"/>
+      <rect x="5" y="6" width="1" height="1" fill="#333333"/>
+      <rect x="9" y="6" width="1" height="1" fill="#333333"/>
+      <!-- SCAR under left eye - two small lines -->
+      <rect x="5" y="8" width="2" height="1" fill="#993020"/>
+      <!-- BIG GRIN - stretched wide -->
+      <rect x="4" y="8" width="8" height="1" fill="#c04828"/>
+      <rect x="5" y="9" width="6" height="1" fill="#c04828"/>
+      <!-- RED VEST open -->
+      <rect x="3" y="9" width="10" height="6" fill="#cc1818"/>
+      <!-- bare chest/skin in middle -->
+      <rect x="6" y="9" width="4" height="6" fill="#d4a050"/>
+      <!-- vest sides -->
+      <rect x="4" y="9" width="2" height="6" fill="#aa1010"/>
+      <rect x="10" y="9" width="2" height="6" fill="#aa1010"/>
+      <!-- arms rubber/tan -->
+      <rect x="1" y="9" width="2" height="6" fill="#cc1818"/>
+      <rect x="13" y="9" width="2" height="6" fill="#cc1818"/>
+      <rect x="0" y="12" width="2" height="3" fill="#d4a050"/>
+      <rect x="14" y="12" width="2" height="3" fill="#d4a050"/>
+    </svg>
+  </div>
+  <div class="name">Luffy</div>
+  <div class="stats"><span class="atk">⚔2</span><span class="hp">♥3</span></div>
+</div>
+
+<!-- ═══ SAITAMA ═══
+     COMPLETELY BALD, yellow suit, RED GLOVES, white cape, totally blank bored face -->
+
+<div class="card hero">
+  <div class="pip">5</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- BALD HEAD - totally smooth, slight highlight -->
+      <rect x="4" y="0" width="8" height="1" fill="#f0d0a8"/>
+      <rect x="3" y="1" width="10" height="6" fill="#e8c898"/>
+      <rect x="2" y="2" width="2" height="4" fill="#e8c898"/>
+      <rect x="12" y="2" width="2" height="4" fill="#e8c898"/>
+      <!-- bald shine highlight -->
+      <rect x="7" y="0" width="3" height="2" fill="#f8e0b8"/>
+      <rect x="8" y="0" width="1" height="1" fill="#ffffff"/>
+      <!-- totally blank face - bored expression -->
+      <!-- flat dot eyes, not expressive at all -->
+      <rect x="5" y="3" width="2" height="1" fill="#1a1a1a"/>
+      <rect x="9" y="3" width="2" height="1" fill="#1a1a1a"/>
+      <!-- completely flat mouth line -->
+      <rect x="5" y="6" width="6" height="1" fill="#b08868"/>
+      <!-- YELLOW SUIT - bright -->
+      <rect x="3" y="7" width="10" height="8" fill="#e8c000"/>
+      <!-- black belt -->
+      <rect x="3" y="12" width="10" height="1" fill="#1a1a1a"/>
+      <!-- white cape behind/sides -->
+      <rect x="0" y="7" width="2" height="8" fill="#f0f0f0"/>
+      <rect x="14" y="7" width="2" height="8" fill="#f0f0f0"/>
+      <rect x="2" y="7" width="1" height="8" fill="#e4e4e4"/>
+      <rect x="13" y="7" width="1" height="8" fill="#e4e4e4"/>
+      <!-- yellow arms -->
+      <rect x="1" y="7" width="2" height="8" fill="#e8c000"/>
+      <rect x="13" y="7" width="2" height="8" fill="#e8c000"/>
+      <!-- RED GLOVES -->
+      <rect x="0" y="10" width="2" height="5" fill="#cc1818"/>
+      <rect x="14" y="10" width="2" height="5" fill="#cc1818"/>
+      <!-- boots black -->
+      <rect x="4" y="15" width="3" height="1" fill="#1a1a1a"/>
+      <rect x="9" y="15" width="3" height="1" fill="#1a1a1a"/>
+    </svg>
+  </div>
+  <div class="name">Saitama</div>
+  <div class="stats"><span class="atk">⚔8</span><span class="hp">♥1</span></div>
+</div>
+
+</div>
+
+<div class="sec">Antagonists</div>
+<div class="grid">
+
+<!-- ═══ FRIEZA ═══
+     White dome head, PURPLE face/shoulder markings, red eyes, white+black armor -->
+
+<div class="card vil">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- elongated white dome head -->
+      <rect x="4" y="0" width="8" height="8" fill="#ece4f4"/>
+      <rect x="3" y="1" width="2" height="6" fill="#ece4f4"/>
+      <rect x="11" y="1" width="2" height="6" fill="#ece4f4"/>
+      <rect x="5" y="0" width="6" height="1" fill="#f4ecfc"/>
+      <!-- PURPLE markings on head - wide bands, very distinctive -->
+      <rect x="3" y="1" width="2" height="1" fill="#6818a0"/>
+      <rect x="11" y="1" width="2" height="1" fill="#6818a0"/>
+      <rect x="4" y="0" width="1" height="2" fill="#6818a0"/>
+      <rect x="11" y="0" width="1" height="2" fill="#6818a0"/>
+      <!-- purple forehead marking -->
+      <rect x="5" y="0" width="6" height="1" fill="#7820b0" opacity=".5"/>
+      <!-- RED glowing eyes -->
+      <rect x="5" y="3" width="2" height="2" fill="#cc0000"/>
+      <rect x="9" y="3" width="2" height="2" fill="#cc0000"/>
+      <rect x="5" y="3" width="1" height="1" fill="#ff4444"/>
+      <rect x="9" y="3" width="1" height="1" fill="#ff4444"/>
+      <rect x="6" y="3" width="1" height="1" fill="#ff8888"/>
+      <rect x="10" y="3" width="1" height="1" fill="#ff8888"/>
+      <!-- sinister lipless smirk -->
+      <rect x="5" y="6" width="6" height="1" fill="#281030"/>
+      <rect x="6" y="7" width="4" height="1" fill="#1a0820"/>
+      <!-- white chest armor -->
+      <rect x="3" y="8" width="10" height="7" fill="#ddd0ec"/>
+      <!-- PURPLE SHOULDER PADS - large, iconic armor -->
+      <rect x="1" y="8" width="3" height="3" fill="#6818a0"/>
+      <rect x="12" y="8" width="3" height="3" fill="#6818a0"/>
+      <!-- black center undersuit -->
+      <rect x="6" y="8" width="4" height="7" fill="#181028"/>
+      <!-- TAIL curling from side -->
+      <rect x="13" y="11" width="3" height="1" fill="#ece4f4"/>
+      <rect x="14" y="12" width="2" height="1" fill="#d8d0e8"/>
+      <rect x="15" y="13" width="1" height="2" fill="#c0b8d0"/>
+    </svg>
+  </div>
+  <div class="name">Frieza</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥3</span></div>
+</div>
+
+<!-- ═══ PAIN (NAGATO) ═══
+     Orange/red spiky hair, RINNEGAN eyes (concentric circles), grey skin, Akatsuki black robe, piercings -->
+
+<div class="card vil">
+  <div class="pip">4</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- orange-red spiky hair -->
+      <rect x="4" y="0" width="8" height="1" fill="#c03800"/>
+      <rect x="3" y="1" width="10" height="3" fill="#c03800"/>
+      <rect x="2" y="2" width="2" height="3" fill="#b03000"/>
+      <rect x="12" y="2" width="2" height="3" fill="#b03000"/>
+      <rect x="5" y="0" width="6" height="1" fill="#e04800"/>
+      <rect x="4" y="0" width="2" height="2" fill="#d04000"/>
+      <rect x="10" y="0" width="2" height="2" fill="#d04000"/>
+      <!-- pale grey-blue dead skin -->
+      <rect x="4" y="4" width="8" height="5" fill="#b0b8c0"/>
+      <!-- RINNEGAN eyes - concentric ring pattern purple/grey -->
+      <rect x="4" y="5" width="3" height="2" fill="#2a1840"/>
+      <rect x="9" y="5" width="3" height="2" fill="#2a1840"/>
+      <rect x="5" y="5" width="2" height="2" fill="#6040a0"/>
+      <rect x="10" y="5" width="2" height="2" fill="#6040a0"/>
+      <rect x="5" y="5" width="1" height="1" fill="#8060c0"/>
+      <rect x="10" y="5" width="1" height="1" fill="#8060c0"/>
+      <rect x="6" y="6" width="1" height="1" fill="#a080e0"/>
+      <rect x="11" y="6" width="1" height="1" fill="#a080e0"/>
+      <!-- facial piercings - dots on face -->
+      <rect x="4" y="4" width="1" height="1" fill="#808088"/>
+      <rect x="7" y="4" width="2" height="1" fill="#808088"/>
+      <rect x="11" y="4" width="1" height="1" fill="#808088"/>
+      <rect x="6" y="8" width="1" height="1" fill="#808088"/>
+      <rect x="9" y="8" width="1" height="1" fill="#808088"/>
+      <!-- flat expression -->
+      <rect x="5" y="7" width="6" height="1" fill="#909098"/>
+      <!-- BLACK Akatsuki robe -->
+      <rect x="3" y="9" width="10" height="6" fill="#0a0a0a"/>
+      <!-- RED CLOUD pattern on robe -->
+      <rect x="4" y="11" width="2" height="1" fill="#cc2020"/>
+      <rect x="3" y="12" width="4" height="1" fill="#cc2020"/>
+      <rect x="9" y="11" width="2" height="1" fill="#cc2020"/>
+      <rect x="10" y="12" width="3" height="1" fill="#cc2020"/>
+      <!-- white collar -->
+      <rect x="6" y="9" width="4" height="1" fill="#e0e0e8"/>
+      <!-- arms -->
+      <rect x="1" y="9" width="2" height="6" fill="#0a0a0a"/>
+      <rect x="13" y="9" width="2" height="6" fill="#0a0a0a"/>
+      <rect x="0" y="13" width="2" height="3" fill="#b0b8c0"/>
+      <rect x="14" y="13" width="2" height="3" fill="#b0b8c0"/>
+    </svg>
+  </div>
+  <div class="name">Pain</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥5</span></div>
+</div>
+
+<!-- ═══ HISOKA ═══
+     Pink/red slicked-back hair, STAR under right eye + TEARDROP under left, yellow predator eyes, fitted outfit -->
+
+<div class="card vil">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- pink/red swept-back hair -->
+      <rect x="4" y="0" width="8" height="1" fill="#c01858"/>
+      <rect x="3" y="1" width="10" height="3" fill="#c01858"/>
+      <rect x="2" y="2" width="2" height="3" fill="#b01048"/>
+      <rect x="12" y="2" width="2" height="3" fill="#b01048"/>
+      <!-- highlights -->
+      <rect x="5" y="0" width="6" height="1" fill="#e030a0"/>
+      <rect x="6" y="1" width="4" height="1" fill="#f040b0"/>
+      <!-- pale white face -->
+      <rect x="4" y="4" width="8" height="5" fill="#f0e4d4"/>
+      <!-- YELLOW predator eyes -->
+      <rect x="5" y="5" width="2" height="2" fill="#886000"/>
+      <rect x="9" y="5" width="2" height="2" fill="#886000"/>
+      <rect x="5" y="5" width="1" height="1" fill="#ccaa00"/>
+      <rect x="9" y="5" width="1" height="1" fill="#ccaa00"/>
+      <rect x="6" y="5" width="1" height="1" fill="#ffdd00"/>
+      <rect x="10" y="5" width="1" height="1" fill="#ffdd00"/>
+      <!-- TEARDROP under LEFT eye - blue -->
+      <rect x="6" y="7" width="1" height="2" fill="#2060cc"/>
+      <rect x="7" y="8" width="1" height="1" fill="#2060cc"/>
+      <!-- STAR under RIGHT eye - pink/magenta, most distinctive feature -->
+      <rect x="9" y="7" width="1" height="1" fill="#cc1858"/>
+      <rect x="8" y="8" width="3" height="1" fill="#cc1858"/>
+      <rect x="9" y="9" width="1" height="1" fill="#cc1858"/>
+      <!-- smirk -->
+      <rect x="5" y="8" width="7" height="1" fill="#c03858"/>
+      <rect x="11" y="7" width="1" height="2" fill="#c03858"/>
+      <!-- fitted dark outfit with diamond motif -->
+      <rect x="3" y="9" width="10" height="6" fill="#1a1020"/>
+      <!-- diamond shapes on costume -->
+      <rect x="5" y="10" width="2" height="2" fill="#cc1858" opacity=".7"/>
+      <rect x="9" y="11" width="2" height="2" fill="#2060cc" opacity=".7"/>
+      <!-- arms -->
+      <rect x="1" y="9" width="2" height="6" fill="#1a1020"/>
+      <rect x="13" y="9" width="2" height="6" fill="#1a1020"/>
+      <rect x="0" y="13" width="2" height="3" fill="#f0e4d4"/>
+      <rect x="14" y="13" width="2" height="3" fill="#f0e4d4"/>
+    </svg>
+  </div>
+  <div class="name">Hisoka</div>
+  <div class="stats"><span class="atk">⚔4</span><span class="hp">♥2</span></div>
+</div>
+
+<!-- ═══ SHIGARAKI ═══
+     Blue-grey hair, RED eyes, pale cracked skin, SEVERED HAND on face, black hoodie -->
+
+<div class="card vil">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- blue-grey messy hair -->
+      <rect x="3" y="0" width="10" height="3" fill="#5878b8"/>
+      <rect x="2" y="1" width="2" height="4" fill="#5070a8"/>
+      <rect x="12" y="1" width="2" height="4" fill="#5070a8"/>
+      <rect x="4" y="0" width="8" height="1" fill="#6888c8"/>
+      <!-- dry pale skin showing -->
+      <rect x="4" y="3" width="8" height="6" fill="#c8c0b8"/>
+      <!-- HAND ON FACE - dried severed hand over mouth/nose area, most iconic feature -->
+      <rect x="3" y="5" width="10" height="3" fill="#d8c8b0"/>
+      <!-- finger bones/knuckles -->
+      <rect x="3" y="5" width="1" height="1" fill="#c0b098"/>
+      <rect x="5" y="5" width="1" height="1" fill="#c0b098"/>
+      <rect x="7" y="5" width="1" height="1" fill="#c0b098"/>
+      <rect x="9" y="5" width="1" height="1" fill="#c0b098"/>
+      <rect x="11" y="5" width="1" height="1" fill="#c0b098"/>
+      <!-- fingers extending up -->
+      <rect x="3" y="3" width="1" height="3" fill="#d0c0a8"/>
+      <rect x="5" y="3" width="1" height="3" fill="#d0c0a8"/>
+      <rect x="7" y="4" width="1" height="2" fill="#d0c0a8"/>
+      <rect x="9" y="3" width="1" height="3" fill="#d0c0a8"/>
+      <rect x="11" y="4" width="1" height="2" fill="#d0c0a8"/>
+      <!-- RED eyes glowing through/above hand -->
+      <rect x="5" y="4" width="2" height="1" fill="#cc0000"/>
+      <rect x="9" y="4" width="2" height="1" fill="#cc0000"/>
+      <rect x="5" y="4" width="1" height="1" fill="#ff2020"/>
+      <rect x="9" y="4" width="1" height="1" fill="#ff2020"/>
+      <!-- scratched neck skin -->
+      <rect x="6" y="8" width="4" height="1" fill="#b8b0a8"/>
+      <rect x="5" y="8" width="1" height="1" fill="#aa2020" opacity=".4"/>
+      <!-- black hoodie -->
+      <rect x="3" y="9" width="10" height="6" fill="#181820"/>
+      <rect x="5" y="9" width="6" height="1" fill="#101018"/>
+      <!-- arms -->
+      <rect x="1" y="9" width="2" height="6" fill="#181820"/>
+      <rect x="13" y="9" width="2" height="6" fill="#181820"/>
+      <rect x="0" y="12" width="2" height="3" fill="#d0c0a8"/>
+      <rect x="14" y="12" width="2" height="3" fill="#d0c0a8"/>
+    </svg>
+  </div>
+  <div class="name">Shigaraki</div>
+  <div class="stats"><span class="atk">⚔3</span><span class="hp">♥3</span></div>
+</div>
+
+<!-- ═══ MERUEM ═══
+     GREEN SKIN, shell-like ARMOR HELMET, two long ANTENNAE from ears,
+     SCORPION TAIL with green+black rings, dark pigment patches on body, barefoot, purple accents -->
+
+<div class="card vil">
+  <div class="pip">5</div>
+  <div class="art">
+    <svg width="52" height="64" viewBox="0 0 24 30" style="image-rendering:pixelated">
+      <!-- dark aura -->
+      <rect x="0"  y="0" width="1" height="30" fill="#1a0030" opacity=".5"/>
+      <rect x="23" y="0" width="1" height="30" fill="#1a0030" opacity=".5"/>
+      <!-- TWO LONG ANTENNAE from sides of head - like long earlobes/tendrils -->
+      <!-- left antenna curves out and down -->
+      <rect x="2"  y="4" width="1" height="8" fill="#4a8a40"/>
+      <rect x="1"  y="10" width="2" height="2" fill="#3a7030"/>
+      <rect x="0"  y="11" width="2" height="2" fill="#2a5820"/>
+      <!-- right antenna curves out and down -->
+      <rect x="21" y="4" width="1" height="8" fill="#4a8a40"/>
+      <rect x="21" y="10" width="2" height="2" fill="#3a7030"/>
+      <rect x="22" y="11" width="2" height="2" fill="#2a5820"/>
+      <!-- SHELL/HELMET armor on head - dome with seams, covers most of head -->
+      <rect x="6"  y="1" width="12" height="2" fill="#3a6a30"/>
+      <rect x="4"  y="3" width="16" height="4" fill="#3a6a30"/>
+      <rect x="3"  y="4" width="2"  height="4" fill="#306028"/>
+      <rect x="19" y="4" width="2"  height="4" fill="#306028"/>
+      <!-- helmet detail lines/seams -->
+      <rect x="8"  y="2" width="1" height="5" fill="#2a5020"/>
+      <rect x="12" y="1" width="1" height="6" fill="#2a5020"/>
+      <rect x="16" y="2" width="1" height="5" fill="#2a5020"/>
+      <!-- helmet highlight -->
+      <rect x="9"  y="2" width="4" height="1" fill="#4a8040"/>
+      <!-- GREEN SKIN face - lower face below helmet -->
+      <rect x="6"  y="7" width="12" height="5" fill="#5a9a48"/>
+      <!-- DARK PIGMENTED areas on face - patches around eyes and cheeks -->
+      <rect x="6"  y="7" width="4" height="2" fill="#2a5020"/>
+      <rect x="14" y="7" width="4" height="2" fill="#2a5020"/>
+      <!-- cold calculating eyes - small, dark -->
+      <rect x="7"  y="8" width="3" height="2" fill="#0a1808"/>
+      <rect x="14" y="8" width="3" height="2" fill="#0a1808"/>
+      <rect x="7"  y="8" width="2" height="1" fill="#1a3010"/>
+      <rect x="14" y="8" width="2" height="1" fill="#1a3010"/>
+      <!-- eye glint -->
+      <rect x="8"  y="8" width="1" height="1" fill="#4a8030" opacity=".6"/>
+      <rect x="15" y="8" width="1" height="1" fill="#4a8030" opacity=".6"/>
+      <!-- flat expression -->
+      <rect x="9"  y="11" width="6" height="1" fill="#3a7030"/>
+      <!-- neck green -->
+      <rect x="10" y="12" width="4" height="2" fill="#5a9a48"/>
+      <!-- BODY - muscular, compact, green skin with dark pigment patches on chest -->
+      <rect x="5"  y="14" width="14" height="9" fill="#5a9a48"/>
+      <!-- dark pigment chest patches -->
+      <rect x="7"  y="14" width="4" height="3" fill="#2a5020"/>
+      <rect x="13" y="14" width="4" height="3" fill="#2a5020"/>
+      <rect x="9"  y="17" width="6" height="2" fill="#2a5020"/>
+      <!-- PURPLE accents - coloring detail on armor shoulder areas -->
+      <rect x="5"  y="14" width="2" height="4" fill="#5a2080"/>
+      <rect x="17" y="14" width="2" height="4" fill="#5a2080"/>
+      <!-- arms green with dark patches -->
+      <rect x="2"  y="14" width="3" height="8" fill="#5a9a48"/>
+      <rect x="19" y="14" width="3" height="8" fill="#5a9a48"/>
+      <rect x="2"  y="15" width="3" height="2" fill="#2a5020"/>
+      <rect x="19" y="15" width="3" height="2" fill="#2a5020"/>
+      <!-- FOUR FINGERS on each hand (canon detail) -->
+      <rect x="1"  y="21" width="1" height="2" fill="#5a9a48"/>
+      <rect x="2"  y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="3"  y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="4"  y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="19" y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="20" y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="21" y="22" width="1" height="2" fill="#5a9a48"/>
+      <rect x="22" y="21" width="1" height="2" fill="#5a9a48"/>
+      <!-- legs green, dark pigment patches -->
+      <rect x="7"  y="23" width="4" height="5" fill="#5a9a48"/>
+      <rect x="13" y="23" width="4" height="5" fill="#5a9a48"/>
+      <rect x="7"  y="24" width="4" height="2" fill="#2a5020"/>
+      <rect x="13" y="24" width="4" height="2" fill="#2a5020"/>
+      <!-- barefoot - no shoes -->
+      <rect x="6"  y="28" width="5" height="2" fill="#4a8040"/>
+      <rect x="13" y="28" width="5" height="2" fill="#4a8040"/>
+      <!-- SCORPION TAIL with green+black alternating rings - emerges from back -->
+      <rect x="19" y="18" width="5" height="2" fill="#4a8040"/>
+      <rect x="20" y="17" width="2" height="1" fill="#0a1808"/>
+      <rect x="21" y="20" width="3" height="2" fill="#0a1808"/>
+      <rect x="22" y="22" width="2" height="2" fill="#4a8040"/>
+      <rect x="22" y="24" width="2" height="2" fill="#0a1808"/>
+      <rect x="22" y="26" width="2" height="1" fill="#4a8040"/>
+      <!-- stinger at tip -->
+      <rect x="22" y="27" width="2" height="2" fill="#8a6000"/>
+      <rect x="23" y="28" width="1" height="2" fill="#6a4000"/>
+    </svg>
+  </div>
+  <div class="name">Meruem</div>
+  <div class="stats"><span class="atk">⚔6</span><span class="hp">♥4</span></div>
+</div>
+
+<!-- ═══ AIZEN ═══
+     Brown hair neat, GLASSES, white captain haori over black shihakusho, calm smile hiding evil -->
+
+<div class="card vil">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- neat dark brown hair, parted -->
+      <rect x="4" y="0" width="8" height="3" fill="#281808"/>
+      <rect x="3" y="1" width="2" height="4" fill="#281808"/>
+      <rect x="11" y="1" width="2" height="4" fill="#281808"/>
+      <rect x="5" y="0" width="6" height="2" fill="#382010"/>
+      <!-- fair skin -->
+      <rect x="4" y="4" width="8" height="4" fill="#e8d0b0"/>
+      <!-- calm brown eyes -->
+      <rect x="5" y="5" width="2" height="2" fill="#382010"/>
+      <rect x="9" y="5" width="2" height="2" fill="#382010"/>
+      <rect x="5" y="5" width="1" height="1" fill="#6a4020"/>
+      <rect x="9" y="5" width="1" height="1" fill="#6a4020"/>
+      <!-- GLASSES - thin frames, very precise -->
+      <rect x="4" y="4" width="4" height="1" fill="#585858"/>
+      <rect x="8" y="4" width="4" height="1" fill="#585858"/>
+      <rect x="4" y="4" width="1" height="3" fill="#585858"/>
+      <rect x="7" y="4" width="1" height="3" fill="#585858"/>
+      <rect x="8" y="4" width="1" height="3" fill="#585858"/>
+      <rect x="11" y="4" width="1" height="3" fill="#585858"/>
+      <!-- bridge of glasses -->
+      <rect x="7" y="5" width="2" height="1" fill="#585858"/>
+      <!-- small calm smile - deceptively pleasant -->
+      <rect x="5" y="7" width="6" height="1" fill="#b08868"/>
+      <rect x="6" y="8" width="4" height="1" fill="#b08868"/>
+      <!-- WHITE CAPTAIN HAORI - long white coat over uniform -->
+      <rect x="2" y="8" width="12" height="7" fill="#f0f0e8"/>
+      <!-- black shihakusho underneath -->
+      <rect x="6" y="8" width="4" height="7" fill="#111111"/>
+      <!-- white collar -->
+      <rect x="5" y="8" width="6" height="1" fill="#ffffff"/>
+      <!-- haori open sides -->
+      <rect x="2" y="8" width="3" height="7" fill="#e8e8e0"/>
+      <rect x="11" y="8" width="3" height="7" fill="#e8e8e0"/>
+      <!-- arms white -->
+      <rect x="1" y="8" width="1" height="7" fill="#e8e8e0"/>
+      <rect x="14" y="8" width="1" height="7" fill="#e8e8e0"/>
+      <rect x="0" y="13" width="2" height="3" fill="#e8d0b0"/>
+      <rect x="14" y="13" width="2" height="3" fill="#e8d0b0"/>
+    </svg>
+  </div>
+  <div class="name">Aizen</div>
+  <div class="stats"><span class="atk">⚔4</span><span class="hp">♥4</span></div>
+</div>
+
+<!-- ═══ MUZAN ═══
+     Slick black hair parted, RED slit eyes, very pale skin, ELEGANT WHITE SUIT -->
+
+<div class="card vil">
+  <div class="pip">3</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- slick black hair, clean center part -->
+      <rect x="4" y="0" width="8" height="3" fill="#0c0808"/>
+      <rect x="3" y="1" width="2" height="4" fill="#0c0808"/>
+      <rect x="11" y="1" width="2" height="4" fill="#0c0808"/>
+      <rect x="5" y="0" width="6" height="2" fill="#181010"/>
+      <!-- center part line -->
+      <rect x="7" y="0" width="2" height="3" fill="#141010"/>
+      <!-- marble pale skin -->
+      <rect x="4" y="4" width="8" height="5" fill="#f0e8e8"/>
+      <!-- RED SLIT EYES - the demon king giveaway -->
+      <rect x="5" y="5" width="2" height="2" fill="#880000"/>
+      <rect x="9" y="5" width="2" height="2" fill="#880000"/>
+      <rect x="5" y="5" width="2" height="1" fill="#cc0000"/>
+      <rect x="9" y="5" width="2" height="1" fill="#cc0000"/>
+      <rect x="6" y="5" width="1" height="2" fill="#330000"/>
+      <rect x="10" y="5" width="1" height="2" fill="#330000"/>
+      <!-- vertical slit pupil -->
+      <rect x="6" y="5" width="1" height="2" fill="#220000"/>
+      <rect x="10" y="5" width="1" height="2" fill="#220000"/>
+      <!-- red highlight -->
+      <rect x="5" y="5" width="1" height="1" fill="#ff2020"/>
+      <rect x="9" y="5" width="1" height="1" fill="#ff2020"/>
+      <!-- cold thin smile -->
+      <rect x="5" y="8" width="6" height="1" fill="#cc9898"/>
+      <!-- ELEGANT WHITE SUIT - formal, aristocratic -->
+      <rect x="3" y="9" width="10" height="6" fill="#f0eeed"/>
+      <!-- black tie down center -->
+      <rect x="7" y="9" width="2" height="6" fill="#0c0808"/>
+      <!-- suit lapels -->
+      <rect x="5" y="9" width="2" height="5" fill="#e4e2e0"/>
+      <rect x="9" y="9" width="2" height="5" fill="#e4e2e0"/>
+      <!-- white arms -->
+      <rect x="1" y="9" width="2" height="6" fill="#f0eeed"/>
+      <rect x="13" y="9" width="2" height="6" fill="#f0eeed"/>
+      <rect x="0" y="13" width="2" height="3" fill="#f0e8e8"/>
+      <rect x="14" y="13" width="2" height="3" fill="#f0e8e8"/>
+    </svg>
+  </div>
+  <div class="name">Muzan</div>
+  <div class="stats"><span class="atk">⚔4</span><span class="hp">♥4</span></div>
+</div>
+
+<!-- ═══ MADARA ═══
+     Long black wild hair, dark armor, SHARINGAN+RINNEGAN eyes, intense presence -->
+
+<div class="card vil">
+  <div class="pip">4</div>
+  <div class="art">
+    <svg width="52" height="52" viewBox="0 0 16 16" style="image-rendering:pixelated">
+      <!-- dark aura -->
+      <rect x="0" y="0" width="1" height="16" fill="#330000" opacity=".5"/>
+      <rect x="15" y="0" width="1" height="16" fill="#330000" opacity=".5"/>
+      <!-- LONG wild black hair - flows out wide -->
+      <rect x="2" y="0" width="12" height="2" fill="#0c0808"/>
+      <rect x="1" y="1" width="14" height="5" fill="#0c0808"/>
+      <rect x="0" y="3" width="2" height="6" fill="#0c0808"/>
+      <rect x="14" y="3" width="2" height="6" fill="#0c0808"/>
+      <!-- hair flowing down sides -->
+      <rect x="0" y="9" width="2" height="6" fill="#0c0808"/>
+      <rect x="14" y="9" width="2" height="6" fill="#0c0808"/>
+      <!-- tan warrior face -->
+      <rect x="4" y="5" width="8" height="5" fill="#c8a068"/>
+      <!-- SHARINGAN left eye - red with tomoe -->
+      <rect x="4" y="6" width="3" height="2" fill="#4a0000"/>
+      <rect x="5" y="6" width="2" height="2" fill="#cc0000"/>
+      <rect x="5" y="6" width="1" height="1" fill="#ff2020"/>
+      <rect x="4" y="7" width="1" height="1" fill="#660000"/>
+      <rect x="7" y="7" width="1" height="1" fill="#660000"/>
+      <!-- RINNEGAN right eye - purple rings -->
+      <rect x="9" y="6" width="3" height="2" fill="#1a0830"/>
+      <rect x="10" y="6" width="2" height="2" fill="#6030a0"/>
+      <rect x="10" y="6" width="1" height="1" fill="#9050d0"/>
+      <rect x="9" y="7" width="1" height="1" fill="#400060"/>
+      <rect x="12" y="7" width="1" height="1" fill="#400060"/>
+      <!-- stern expression -->
+      <rect x="5" y="9" width="6" height="1" fill="#a08050"/>
+      <!-- BLACK SAMURAI ARMOR -->
+      <rect x="2" y="10" width="12" height="5" fill="#0e0e0e"/>
+      <!-- grey armor chest plates -->
+      <rect x="4" y="10" width="8" height="2" fill="#383838"/>
+      <rect x="3" y="12" width="10" height="2" fill="#282828"/>
+      <!-- armor shoulder guards -->
+      <rect x="1" y="10" width="3" height="2" fill="#303030"/>
+      <rect x="12" y="10" width="3" height="2" fill="#303030"/>
+      <!-- arms armored -->
+      <rect x="1" y="12" width="2" height="3" fill="#1e1e1e"/>
+      <rect x="13" y="12" width="2" height="3" fill="#1e1e1e"/>
+      <rect x="0" y="13" width="2" height="3" fill="#c8a068"/>
+      <rect x="14" y="13" width="2" height="3" fill="#c8a068"/>
+    </svg>
+  </div>
+  <div class="name">Madara</div>
+  <div class="stats"><span class="atk">⚔5</span><span class="hp">♥5</span></div>
+</div>
+
+</div>
+
+<div class="note">
+  Key design rule: each sprite uses <strong>1–2 signature features</strong> to stay recognizable at 52px.<br>
+  Gon: spiky hair + green jacket + red trim · Killua: white hair + lightning · Naruto: blonde + whisker marks · Mikasa: black hair + red scarf<br>
+  Levi: undercut + white cravat · Rock Lee: bowl cut + thick brows + orange weights · Ichigo: orange hair + black kimono · Luffy: straw hat + scar<br>
+  Saitama: bald + yellow suit + white cape · Frieza: dome + purple marks · Pain: rinnegan + piercings + Akatsuki robe<br>
+  Hisoka: pink hair + star/teardrop face marks · Shigaraki: hand on face + red eyes · Meruem: horn + tail · Aizen: glasses + white haori · Muzan: white suit + red slit eyes · Madara: long black hair + dual eyes
+</div>
+
+</body>
+</html>
